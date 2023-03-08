@@ -6,7 +6,7 @@ class Titlescreen extends Phaser.Scene {
         preload(){
 
             //import BG
-            this.load.image("TitleScreen", "assets/Titlescreen.png");
+            this.load.image("TitleScreen", "../assets/croquis_menu_start.png");
 
             //import bouton
             this.load.image("boutonplay", "assets/bouton_start.png");
