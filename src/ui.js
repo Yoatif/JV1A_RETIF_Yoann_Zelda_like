@@ -1,6 +1,6 @@
-class GameWin extends phaser.scene{
+class GameUi extends phaser.scene{
     constructor(){
-        super("GameWin");
+        super("GameUi");
     }
     
     preload(){
