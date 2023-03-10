@@ -9,8 +9,12 @@ class Titlescreen extends Phaser.Scene {
             this.load.image("TitleScreen", "../assets/croquis_menu_start.png");
 
             //import bouton
-            this.load.image("boutonplay", "assets/bouton_start.png");
-            this.load.image("boutonquit", "assets/bouton_quit.png");
+            this.load.image("boutonplay", "assets/first_start_button.png");
+            this.load.image("boutonplay2", "assets/second_start_button.png");
+            this.load.image("boutonexit", "assets/first_exit_button.png");
+            this.load.image("boutonexit2", "assets/second_exit_button.png");
+            this.load.image("boutoninfo", "assets/first_info_button.png");
+            this.load.image("boutoninfo2", "assets/second_info_button.png");
 
             // import audio
 
@@ -46,9 +50,12 @@ class Titlescreen extends Phaser.Scene {
 
             this.boutonplay.on("pointerdown", () => {
                 //this.clicksound.play()
+                this.boutonplay = this.add.image(750,85,"boutonplay2")
+                setTimeout()
                 console.log("play")
                 this.scene.start("scene1")
             })
+
 
 
             this.boutonplay.setScale(1.5);
