@@ -3,6 +3,10 @@ class Titlescreen extends Phaser.Scene {
         super("Titlescreen");
         }
 
+        init(){
+
+        }
+
         preload(){
 
             //import BG
@@ -39,7 +43,7 @@ class Titlescreen extends Phaser.Scene {
             var group = this.add.group({
                 key: 'TitleScreen',
                 frameQuantity: 32,
-                setXY: { x: 448, y: 224 },
+                //setXY: { x: 448, y: 224 },
                 //setScale: { x:2, y: 2, }
             });
                 
@@ -58,7 +62,7 @@ class Titlescreen extends Phaser.Scene {
 
 
 
-            this.boutonplay.setScale(1.5);
+            this.boutonplay.setScale(1);
 
            
 
