@@ -4,67 +4,78 @@ class Titlescreen extends Phaser.Scene {
         }
 
         init(){
+            this.timedEvent;
 
         }
 
         preload(){
 
             //import BG
-            this.load.image("TitleScreen", "../assets/croquis_menu_start.png");
+            this.load.image("background", "assets/croquis_menu_start.png");
 
             //import bouton
-            this.load.image("boutonplay", "assets/first_start_button.png");
-            this.load.image("boutonplay2", "assets/second_start_button.png");
-            this.load.image("boutonexit", "assets/first_exit_button.png");
-            this.load.image("boutonexit2", "assets/second_exit_button.png");
-            this.load.image("boutoninfo", "assets/first_info_button.png");
-            this.load.image("boutoninfo2", "assets/second_info_button.png");
+            this.load.image("playButton", "assets/first_start_button.png");
+            this.load.image("playButton2", "assets/second_start_button.png");
+            this.load.image("exitbutton", "assets/first_exit_button.png");
+            this.load.image("exitbutton2", "assets/second_exit_button.png");
+            this.load.image("infobutton", "assets/first_info_button.png");
+            this.load.image("infobutton2", "assets/second_info_button.png");
 
             // import audio
 
             //this.load.audio("theme", ["sound/theme.ogg", "sound/theme.mp3"]);
-            //this.load.audio("button_sound", ["sound/click_button.ogg", "sound/click_button.mp3"]);
+            this.load.audio("button_sound", ["sound/click_button.ogg", "sound/click_button.mp3"]);
 
         }
 
         create(){
-
-           
+            
 
             //adding theme to Titlescreen
             //this.theme = this.sound.add("theme", {volume: 0.2, loop: true});
             //this.theme.play();
 
             //button_sound
-            //this.clicksound = this.sound.add("button_sound", {volume: 0.8, loop: false});
+            this.clicksound = this.sound.add("button_sound", {volume: 0.8, loop: false});
             
 
 
-            var group = this.add.group({
-                key: 'TitleScreen',
-                frameQuantity: 32,
-                //setXY: { x: 448, y: 224 },
-                //setScale: { x:2, y: 2, }
-            });
+            this.add.image(800,400,"background")
                 
-            //this.cursors = this.input.keyboard.createCursorKeys();
+            //creating start button to play game
+            this.playButton = this.add.image(1350,200, "playButton").setInteractive();
 
-            
-            this.boutonplay = this.add.image(750,85, "boutonplay").setInteractive();
-
-            this.boutonplay.on("pointerdown", () => {
-                //this.clicksound.play()
-                this.boutonplay = this.add.image(750,85,"boutonplay2")
-                setTimeout()
+            this.playButton.on("pointerdown", () => {
+                this.clicksound.play()
+                this.playButton.destroy
+                //this.playButton = this.add.image(1350,200,"playButton2").setScale(0.5)
+                this.time.delayedCall(3000, eventPlay, [], this);
                 console.log("play")
-                this.scene.start("scene1")
+                   
             })
+            this.playButton.setScale(0.5);
+
+            //creating exit button which close the game
+            this.exitbutton = this.add.image(1350,600, "exitbutton").setInteractive();
+
+            this.exitbutton.on("pointerdown", () => {
+                this.clicksound.play()
+                window.close()
+                 
+            })
+            this.exitbutton.setScale(0.5);
 
 
+            //creating info button who start info scene
+            this.infobutton = this.add.image(1350,600, "infobutton").setInteractive();
 
-            this.boutonplay.setScale(1);
-
-           
+            this.infobutton.on("pointerdown", () => {
+                this.clicksound.play()
+                this.time.delayedCall(3000, eventInfo, [], this);
+                this.scene.start("Info")
+                
+            })
+            this.infobutton.setScale(0.5);
 
             
         }
@@ -74,6 +85,14 @@ class Titlescreen extends Phaser.Scene {
             /*if (this.cursors.space.isDown){
                 this.scene.start("scene1");*/
 
+        }
+
+        eventPlay(){
+            this.scene.start("Scene1");
+        }
+
+        eventInfo(){
+            this.scene.start("Info");
         }
 
       

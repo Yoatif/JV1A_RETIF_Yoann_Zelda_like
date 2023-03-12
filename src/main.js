@@ -1,15 +1,15 @@
 var config = {
-    width: 800,
-    height: 600,
+    width: 1600,
+    height: 800,
     parent: "game-container",
     physics: {
           default: 'arcade',
           arcade: {
               gravity: { y: 0 },
-              debug: false
+              debug: true
           }
       },
-      scene: [Titlescreen]
+      scene: [Titlescreen,Info]
     }
   
   var game = new Phaser.Game(config);
