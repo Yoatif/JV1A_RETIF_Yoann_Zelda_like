@@ -67,7 +67,7 @@ class Titlescreen extends Phaser.Scene {
 
 
             //creating info button who start info scene
-            this.infobutton = this.add.image(1350,600, "infobutton").setInteractive();
+            this.infobutton = this.add.image(250,400, "infobutton").setInteractive();
 
             this.infobutton.on("pointerdown", () => {
                 this.clicksound.play()
