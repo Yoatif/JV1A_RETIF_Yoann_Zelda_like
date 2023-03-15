@@ -1,4 +1,4 @@
-class GameUi extends phaser.scene{
+class GameUi extends Phaser.Scene{
     constructor(){
         super("GameUi");
     }
