@@ -1,6 +1,6 @@
-class Scene1 extends Phaser.Scene{
+class Map1 extends Phaser.Scene{
     constructor(){
-        super("Scene1");
+        super("Map1");
     }
 
     init(){
@@ -8,12 +8,12 @@ class Scene1 extends Phaser.Scene{
     }
     
     preload(){
-        this.load.image("sol","assets/Croquis_map_1");
+        this.load.image("sol","assets/map_1/sol.png");
 
     }
 
     create(){
-        this.add.image(500,500,"sol");
+        this.add.image(800,400,"sol");
 
     }
 

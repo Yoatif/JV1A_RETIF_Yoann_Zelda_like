@@ -11,15 +11,15 @@ class Titlescreen extends Phaser.Scene {
         preload(){
 
             //import BG
-            this.load.image("background", "assets/croquis_menu_start.png");
+            this.load.image("background", "assets/menu/croquis_menu_start.png");
 
             //import bouton
-            this.load.image("playButton", "assets/first_start_button.png");
-            this.load.image("playButton2", "assets/second_start_button.png");
-            this.load.image("exitbutton", "assets/first_exit_button.png");
-            this.load.image("exitbutton2", "assets/second_exit_button.png");
-            this.load.image("infobutton", "assets/first_info_button.png");
-            this.load.image("infobutton2", "assets/second_info_button.png");
+            this.load.image("playButton", "assets/menu/first_start_button.png");
+            this.load.image("playButton2", "assets/menu/second_start_button.png");
+            this.load.image("exitbutton", "assets/menu/first_exit_button.png");
+            this.load.image("exitbutton2", "assets/menu/second_exit_button.png");
+            this.load.image("infobutton", "assets/menu/first_info_button.png");
+            this.load.image("infobutton2", "assets/menu/second_info_button.png");
 
             // import audio
 
@@ -47,9 +47,9 @@ class Titlescreen extends Phaser.Scene {
 
             this.playButton.on("pointerdown", () => {
                 this.clicksound.play()
-                this.playButton.destroy
+                //this.playButton.destroy
                 //this.playButton = this.add.image(1350,200,"playButton2").setScale(0.5)
-                this.time.delayedCall(3000, eventPlay, [], this);
+                this.time.delayedCall(3000, this.eventPlay, [], this);
                 console.log("play")
                    
             })
@@ -71,7 +71,7 @@ class Titlescreen extends Phaser.Scene {
 
             this.infobutton.on("pointerdown", () => {
                 this.clicksound.play()
-                this.time.delayedCall(3000, eventInfo, [], this);
+                this.time.delayedCall(3000, this.eventInfo, [], this);
                 this.scene.start("Info")
                 
             })
