@@ -3,7 +3,7 @@ class GameUi extends Phaser.Scene{
         super("GameUi");
     }
 
-    Init(){
+    init(){
         
     }
     

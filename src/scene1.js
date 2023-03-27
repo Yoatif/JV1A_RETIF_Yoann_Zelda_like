@@ -1,19 +1,33 @@
-class Map1 extends Phaser.Scene{
+class Scene1 extends Phaser.Scene{
     constructor(){
-        super("Map1");
+        super("Scene1");
     }
 
     init(){
+        this.coordPlayerX = 100;
+        this.coordPlayerY = 100;
             
     }
     
     preload(){
-        this.load.image("sol","assets/map_1/sol.png");
+
+        //preload diffent asset of the map
+        this.load.image("sol","../assets/map1/sol.png");
+
+        //creating player for test
+        
 
     }
 
     create(){
+        console.log("first map")
         this.add.image(800,400,"sol");
+        
+        this.scene.add('Character', Character, true, { x: 400, y: 300 });
+
+
+        
+       
 
     }
 
