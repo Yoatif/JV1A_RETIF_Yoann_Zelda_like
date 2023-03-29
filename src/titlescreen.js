@@ -49,7 +49,7 @@ class Titlescreen extends Phaser.Scene {
                 this.clicksound.play()
                 //this.playButton.destroy
                 //this.playButton = this.add.image(1350,200,"playButton2").setScale(0.5)
-                this.time.delayedCall(3000, this.eventPlay, [], this);
+                this.time.delayedCall(1000, this.eventPlay, [], this);
                 console.log("play")
                    
             })
@@ -71,7 +71,7 @@ class Titlescreen extends Phaser.Scene {
 
             this.infobutton.on("pointerdown", () => {
                 this.clicksound.play()
-                this.time.delayedCall(3000, this.eventInfo, [], this);
+                this.time.delayedCall(1000, this.eventInfo, [], this);
                 this.scene.start("Info")
                 
             })

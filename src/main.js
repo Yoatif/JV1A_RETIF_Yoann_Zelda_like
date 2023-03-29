@@ -1,14 +1,16 @@
 var config = {
-    width: 1600,
-    height: 800,
+    width: 5120,
+    height: 3072,
     parent: "game-container",
     physics: {
           default: 'arcade',
           arcade: {
+            
               gravity: { y: 0 },
               debug: true
           }
       },
+      pixelArt: true,      
       scene: [Titlescreen,Info,Scene1]
     }
   
