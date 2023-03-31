@@ -40,7 +40,7 @@ class Scene1 extends Phaser.Scene{
     const tileset = carteDuNiveau.addTilesetImage(
     "tileset",
     "jeudetuile"
-    ); 
+    );
 
     const sol = carteDuNiveau.createLayer(
     "sol",
@@ -149,14 +149,6 @@ class Scene1 extends Phaser.Scene{
 
     //input
     this.cursors = this.input.keyboard.createCursorKeys();
-
-
-
-
-
-
-        
-       
 
     }
 

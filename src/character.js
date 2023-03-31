@@ -48,7 +48,7 @@ class Character extends Phaser.Scene{
             frameRate: 10,
             repeat: -1
         });
-        this.player = this.physics.add.sprite(this.coordPlayerX, this.coordPlayerY, 'persoGolem').setScale(2);
+        this.player = this.physics.add.sprite(this.coordPlayerX, this.coordPlayerY, 'playerFront').setScale(0.2);
 
     }
 
