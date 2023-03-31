@@ -87,12 +87,11 @@ class Scene1 extends Phaser.Scene{
         tileset
     );
 
+    const shopZone = carteDuNiveau.getObjectLayer(merchant_scene)
 
-    //set collision by property                    
 
-    rock1.setCollisionByProperty({ collider: true });
-    rock2.setCollisionByProperty({ collider: true });
-    //vide.setCollisionByProperty({ vide: true});
+    
+    
       
     //création caméra
     this.cameras.main.setSize(1600, 900); 
@@ -101,6 +100,7 @@ class Scene1 extends Phaser.Scene{
     this.player.setCollideWorldBounds(true);
     this.player.setScale(0.08);
     this.physics.add.collider(this.player,rock1);
+    this.physics.add.collider(this.player,rock2);
 
     //importation des entrées clavier
 
@@ -141,6 +141,15 @@ class Scene1 extends Phaser.Scene{
         frameRate: 20
     });
 
+    //set collision by property                    
+
+    this.rock1.setCollisionByProperty({ collider: true });
+    this.rock2.setCollisionByProperty({ collider: true });
+    
+    //set collision between player and encironement
+    
+    this.physics.add.collider(this.player,this.rock1);
+    this.physics.add.collider(this.player,this.rock2);
      // caméra 
 
     this.cameras.main.setBounds(0,0,5120,3072);
