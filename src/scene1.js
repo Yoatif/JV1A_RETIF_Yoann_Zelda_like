@@ -87,7 +87,10 @@ class Scene1 extends Phaser.Scene{
         tileset
     );
 
-    const shopZone = carteDuNiveau.getObjectLayer(merchant_scene)
+    const shopScene = carteDuNiveau.createLayer(
+        "shopScene",
+        tileset
+    );
 
 
     
@@ -143,13 +146,19 @@ class Scene1 extends Phaser.Scene{
 
     //set collision by property                    
 
-    this.rock1.setCollisionByProperty({ collider: true });
-    this.rock2.setCollisionByProperty({ collider: true });
+    rock1.setCollisionByProperty({ collider: true });
+    rock2.setCollisionByProperty({ collider: true });
+    shopScene.setCollisionByProperty({collider: true});
     
     //set collision between player and encironement
     
     this.physics.add.collider(this.player,this.rock1);
     this.physics.add.collider(this.player,this.rock2);
+    
+    // set overlap
+
+    this.physics.add.collider(this.player, this.shopScene, this.goShop, null, this);
+
      // caméra 
 
     this.cameras.main.setBounds(0,0,5120,3072);
@@ -199,5 +208,10 @@ class Scene1 extends Phaser.Scene{
         }
         
 
+    }
+
+    goShop(){
+        console.log("YOYOYO");
+        this.scene.start('Shop');
     }
 }

@@ -1,6 +1,6 @@
-class Scene1 extends Phaser.Scene{
+class Shop extends Phaser.Scene{
     constructor(){
-        super("Scene1");
+        super("Shop");
     }
 
     init(){
@@ -14,7 +14,7 @@ class Scene1 extends Phaser.Scene{
         //this.load.image("sol","../assets/map1/sol.png");
 
         //import tiles
-        this.load.tilemapTiledJSON("scene1", "../LD/shop.json");
+        this.load.tilemapTiledJSON("shop", "../LD/shop.json");
 
 
         //import tileset
@@ -29,12 +29,12 @@ class Scene1 extends Phaser.Scene{
     }
 
     create(){
-        console.log("first map")
+        console.log("shop map")
     //this.add.image(800,400,"sol");
 
     // this.scene.add('Character', Character, true, { x: 400, y: 300 });
 
-    const carteDuNiveau = this.add.tilemap("scene1");
+    const carteDuNiveau = this.add.tilemap("shop");
 
     // importer les TileSet
     const tileset = carteDuNiveau.addTilesetImage(
@@ -48,45 +48,16 @@ class Scene1 extends Phaser.Scene{
     );
 
     const rock1 = carteDuNiveau.createLayer(
-    "Rock1",
+    "rock1",
     tileset, 
     );
 
-    const rock2 = carteDuNiveau.createLayer(
-    "rock2",
+    const batimentShop = carteDuNiveau.createLayer(
+    "shop",
     tileset, 
     );
 
-    const water = carteDuNiveau.createLayer(
-        "water",
-        tileset,
-    );
-
-    const pont = carteDuNiveau.createLayer(
-    "pont",
-    tileset, 
-    );
-
-    const sideDalle = carteDuNiveau.createLayer(
-    "side_dalle",
-    tileset, 
-    );
     
-    const dalleButon = carteDuNiveau.createLayer(
-        "dalle_bouton",
-        tileset
-    );
-
-    const button1 = carteDuNiveau.createLayer(
-        "button1",
-        tileset
-    );
-
-    const button2 = carteDuNiveau.createLayer(
-        "button2",
-        tileset
-    );
-
 
     
     
@@ -98,7 +69,7 @@ class Scene1 extends Phaser.Scene{
     this.player.setCollideWorldBounds(true);
     this.player.setScale(0.08);
     this.physics.add.collider(this.player,rock1);
-    this.physics.add.collider(this.player,rock2);
+    this.physics.add.collider(this.player,batimentShop);
 
     //importation des entrées clavier
 
@@ -141,13 +112,13 @@ class Scene1 extends Phaser.Scene{
 
     //set collision by property                    
 
-    this.rock1.setCollisionByProperty({ collider: true });
-    this.rock2.setCollisionByProperty({ collider: true });
+    rock1.setCollisionByProperty({ collider: true });
+    batimentShop.setCollisionByProperty({ collider: true });
     
     //set collision between player and encironement
     
     this.physics.add.collider(this.player,this.rock1);
-    this.physics.add.collider(this.player,this.rock2);
+    this.physics.add.collider(this.player,this.shop);
      // caméra 
 
     this.cameras.main.setBounds(0,0,5120,3072);
