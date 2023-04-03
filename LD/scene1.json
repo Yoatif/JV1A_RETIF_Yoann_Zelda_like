@@ -1080,6 +1080,197 @@
         }, 
         {
          "draworder":"topdown",
+         "id":13,
+         "name":"spawn_monstre",
+         "objects":[
+                {
+                 "class":"",
+                 "height":0,
+                 "id":3,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":4260,
+                 "y":1016
+                }, 
+                {
+                 "class":"",
+                 "height":0,
+                 "id":4,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":4260,
+                 "y":1228
+                }, 
+                {
+                 "class":"",
+                 "height":0,
+                 "id":5,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":4052,
+                 "y":1096
+                }, 
+                {
+                 "class":"",
+                 "height":0,
+                 "id":6,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":3936,
+                 "y":1748
+                }, 
+                {
+                 "class":"",
+                 "height":0,
+                 "id":7,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":3648,
+                 "y":1648
+                }, 
+                {
+                 "class":"",
+                 "height":0,
+                 "id":8,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":3416,
+                 "y":1792
+                }, 
+                {
+                 "class":"",
+                 "height":0,
+                 "id":9,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":968,
+                 "y":1908
+                }, 
+                {
+                 "class":"",
+                 "height":0,
+                 "id":10,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":1268,
+                 "y":1904
+                }, 
+                {
+                 "class":"",
+                 "height":0,
+                 "id":11,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":1120,
+                 "y":1680
+                }, 
+                {
+                 "class":"",
+                 "height":0,
+                 "id":12,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":1008,
+                 "y":2488
+                }, 
+                {
+                 "class":"",
+                 "height":0,
+                 "id":13,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":996,
+                 "y":2932
+                }, 
+                {
+                 "class":"",
+                 "height":0,
+                 "id":14,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":1192,
+                 "y":2720
+                }, 
+                {
+                 "class":"",
+                 "height":0,
+                 "id":15,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":4572,
+                 "y":2480
+                }, 
+                {
+                 "class":"",
+                 "height":0,
+                 "id":16,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":4576,
+                 "y":2816
+                }, 
+                {
+                 "class":"",
+                 "height":0,
+                 "id":17,
+                 "name":"",
+                 "point":true,
+                 "rotation":0,
+                 "visible":true,
+                 "width":0,
+                 "x":4408,
+                 "y":2620
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
          "id":8,
          "name":"temple_scene",
          "objects":[
@@ -1106,8 +1297,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":13,
- "nextobjectid":3,
+ "nextlayerid":14,
+ "nextobjectid":18,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.9.2",
@@ -2123,20 +2314,14 @@
                      "objects":[
                             {
                              "class":"",
-                             "height":16.4818463270476,
-                             "id":1,
-                             "name":"collider",
-                             "properties":[
-                                    {
-                                     "name":"collider",
-                                     "type":"bool",
-                                     "value":true
-                                    }],
+                             "height":32,
+                             "id":2,
+                             "name":"sceneChange",
                              "rotation":0,
                              "visible":true,
-                             "width":31.702786377709,
-                             "x":0.0900647340275813,
-                             "y":9.90712074303406
+                             "width":32,
+                             "x":0,
+                             "y":0
                             }],
                      "opacity":1,
                      "type":"objectgroup",
@@ -2146,7 +2331,7 @@
                     },
                  "properties":[
                         {
-                         "name":"collider",
+                         "name":"sceneChange",
                          "type":"bool",
                          "value":true
                         }]

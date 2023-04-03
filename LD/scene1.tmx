@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="160" height="96" tilewidth="32" tileheight="32" infinite="0" nextlayerid="13" nextobjectid="3">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="160" height="96" tilewidth="32" tileheight="32" infinite="0" nextlayerid="14" nextobjectid="18">
  <editorsettings>
   <export target="scene1.json" format="json"/>
  </editorsettings>
@@ -296,14 +296,10 @@
   </tile>
   <tile id="253">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="sceneChange" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
-    <object id="1" name="collider" x="0.0900647" y="9.90712" width="31.7028" height="16.4818">
-     <properties>
-      <property name="collider" type="bool" value="true"/>
-     </properties>
-    </object>
+    <object id="2" name="sceneChange" x="0" y="0" width="32" height="32"/>
    </objectgroup>
   </tile>
  </tileset>
@@ -1310,6 +1306,53 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
+ <objectgroup id="13" name="spawn_monstre">
+  <object id="3" x="4260" y="1016">
+   <point/>
+  </object>
+  <object id="4" x="4260" y="1228">
+   <point/>
+  </object>
+  <object id="5" x="4052" y="1096">
+   <point/>
+  </object>
+  <object id="6" x="3936" y="1748">
+   <point/>
+  </object>
+  <object id="7" x="3648" y="1648">
+   <point/>
+  </object>
+  <object id="8" x="3416" y="1792">
+   <point/>
+  </object>
+  <object id="9" x="968" y="1908">
+   <point/>
+  </object>
+  <object id="10" x="1268" y="1904">
+   <point/>
+  </object>
+  <object id="11" x="1120" y="1680">
+   <point/>
+  </object>
+  <object id="12" x="1008" y="2488">
+   <point/>
+  </object>
+  <object id="13" x="996" y="2932">
+   <point/>
+  </object>
+  <object id="14" x="1192" y="2720">
+   <point/>
+  </object>
+  <object id="15" x="4572" y="2480">
+   <point/>
+  </object>
+  <object id="16" x="4576" y="2816">
+   <point/>
+  </object>
+  <object id="17" x="4408" y="2620">
+   <point/>
+  </object>
+ </objectgroup>
  <objectgroup id="8" name="temple_scene">
   <object id="2" x="4833.33" y="2280" width="274.667" height="782.667">
    <properties>

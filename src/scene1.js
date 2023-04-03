@@ -26,6 +26,8 @@ class Scene1 extends Phaser.Scene{
         this.load.spritesheet("hero_down","assets/chara/chara_front.png",
                     { frameWidth: 365, frameHeight: 768 });
 
+        this.load.image("mobRock","assets/chara/chara_monstre_1.png");
+
     }
 
     create(){
@@ -92,6 +94,13 @@ class Scene1 extends Phaser.Scene{
         tileset
     );
 
+    this.mobRock1 = this.physics.add.group({
+    });
+
+    this.spawn_mobRock = carteDuNiveau.getObjectLayer('spawn_monstre');
+    this.spawn_mobRock.objects.forEach(spawn_mobRock=> {
+    const golem =  this.mobRock1.create(spawn_mobRock.x,  spawn_mobRock.y, "mobRock").setScale(0.2);});
+
 
     
     
@@ -148,7 +157,7 @@ class Scene1 extends Phaser.Scene{
 
     rock1.setCollisionByProperty({ collider: true });
     rock2.setCollisionByProperty({ collider: true });
-    shopScene.setCollisionByProperty({collider: true});
+    shopScene.setCollisionByProperty({sceneChange: true});
     
     //set collision between player and encironement
     
@@ -157,7 +166,7 @@ class Scene1 extends Phaser.Scene{
     
     // set overlap
 
-    this.physics.add.collider(this.player, this.shopScene, this.goShop, null, this);
+    this.physics.add.collider(this.player, shopScene, this.goShop, null, this);
 
      // caméra 
 

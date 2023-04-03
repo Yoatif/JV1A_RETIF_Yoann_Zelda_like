@@ -124,34 +124,6 @@
          "width":40,
          "x":0,
          "y":0
-        }, 
-        {
-         "draworder":"topdown",
-         "id":4,
-         "name":"startScene1",
-         "objects":[
-                {
-                 "class":"",
-                 "height":6,
-                 "id":1,
-                 "name":"startScene1",
-                 "properties":[
-                        {
-                         "name":"startScene1",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":0,
-                 "visible":true,
-                 "width":488,
-                 "x":524,
-                 "y":940
-                }],
-         "opacity":1,
-         "type":"objectgroup",
-         "visible":true,
-         "x":0,
-         "y":0
         }],
  "nextlayerid":5,
  "nextobjectid":2,

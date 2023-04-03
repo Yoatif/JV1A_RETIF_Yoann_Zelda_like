@@ -65,9 +65,9 @@ class Shop extends Phaser.Scene{
     //création caméra
     this.cameras.main.setSize(1600, 900); 
 
-    this.player = this.physics.add.sprite(4750, 900, "hero_down")/*set position to  200, 6144, */;
+    this.player = this.physics.add.sprite(640, 900, "hero_down")/*set position to  200, 6144, */;
     this.player.setCollideWorldBounds(true);
-    this.player.setScale(0.08);
+    this.player.setScale(0.1);
     this.physics.add.collider(this.player,rock1);
     this.physics.add.collider(this.player,batimentShop);
 
