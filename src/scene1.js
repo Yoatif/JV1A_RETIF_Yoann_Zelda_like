@@ -11,22 +11,22 @@ class Scene1 extends Phaser.Scene{
     preload(){
 
         //preload diffent asset of the map
-        //this.load.image("sol","../assets/map1/sol.png");
 
         //import tiles
         this.load.tilemapTiledJSON("scene1", "../LD/scene1.json");
 
-
         //import tileset
         this.load.image("jeudetuile","../LD/tileset.png");
-
-        
 
         //creating player for test
         this.load.spritesheet("hero_down","assets/chara/chara_front.png",
                     { frameWidth: 365, frameHeight: 768 });
 
+        //preload monster
         this.load.image("mobRock","assets/chara/chara_monstre_1.png");
+
+        //preload skills
+        this.load.image("fireball", "assets/chara/fireball.png")
 
     }
 
@@ -174,6 +174,8 @@ class Scene1 extends Phaser.Scene{
     this.cameras.main.startFollow(this.player);
     this.physics.world.setBounds(0,0,5120,3072);
 
+    this.fireball = this.add.group();
+
     //input
     this.cursors = this.input.keyboard.createCursorKeys();
 
@@ -181,7 +183,6 @@ class Scene1 extends Phaser.Scene{
 
     update(){
 
-    
         //Mouvement
         if (this.cursors.up.isDown) {
             this.player.anims.play('hero_up');
@@ -219,8 +220,12 @@ class Scene1 extends Phaser.Scene{
 
     }
 
+    //lancement scene == changement de carte
     goShop(){
         console.log("YOYOYO");
         this.scene.start('Shop');
+    }
+    goScene2(){
+        this.start.scene('Scene2');
     }
 }
