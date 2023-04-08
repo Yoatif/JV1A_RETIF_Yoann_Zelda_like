@@ -13,7 +13,7 @@ class Scene2 extends Phaser.Scene{
         //this.load.image("sol","../assets/map1/sol.png");
 
         //import tiles
-        this.load.tilemapTiledJSON("scene1", "../LD/scene1.json");
+        this.load.tilemapTiledJSON("scene1", "../LD/scene3.json");
 
 
         //import tileset
@@ -25,7 +25,7 @@ class Scene2 extends Phaser.Scene{
         this.load.spritesheet("hero_down","assets/chara/chara_front.png",
                     { frameWidth: 365, frameHeight: 768 });
 
-        this.load.image("mobRock","assets/chara/chara_monstre_1.png");
+        //this.load.image("mobRock","assets/chara/chara_monstre_1.png");
 
     }
 
